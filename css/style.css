@@ -430,7 +430,7 @@ section{scroll-margin-top:84px}
 
   /* WhatsApp bar: shrink and center on mobile */
   .wa-bar{
-    max-width:330px;margin:26px auto 0;gap:8px;
+    max-width:330px;margin:148px auto 0;gap:8px;
     padding:6px 6px 6px 16px;
   }
   .wa-bar__label{gap:9px;font-size:.92rem}
