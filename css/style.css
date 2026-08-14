@@ -348,18 +348,28 @@ section{scroll-margin-top:84px}
 /* =========================================================
    CONTACT + BANK CARD
    ========================================================= */
-.contact{background:var(--navy);color:#fff}
-.contact__grid{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:start}
-.contact__title{font-family:'Barlow Semi Condensed',sans-serif;font-weight:800;font-size:clamp(2rem,4vw,2.9rem);line-height:1.05;margin-bottom:16px;letter-spacing:-.01em}
-.contact__lead{color:#b9bcd6;font-size:1.02rem;margin-bottom:30px;max-width:44ch}
-.contact__blocks{display:flex;flex-direction:column}
-.cblock{padding:20px 0;border-top:1px solid var(--navy-line);display:flex;gap:16px;align-items:flex-start}
-.cblock:last-child{border-bottom:1px solid var(--navy-line)}
-.cblock__ic{flex:none;width:40px;height:40px;border-radius:9px;background:rgba(232,134,43,.16);display:flex;align-items:center;justify-content:center}
-.cblock__ic svg{width:19px;height:19px;stroke:var(--orange)}
-.cblock__t{font-family:'Barlow Semi Condensed',sans-serif;font-weight:800;text-transform:uppercase;letter-spacing:.1em;font-size:.74rem;color:#8f93bd;margin-bottom:4px}
-.cblock__v{font-size:1rem;font-weight:600;line-height:1.5}
-.cblock__v a:hover{color:var(--orange)}
+.contact{position:relative;color:#fff;overflow:hidden;padding:96px 0}
+.contact__bg{position:absolute;inset:0;z-index:0}
+.contact__bg img{width:100%;height:100%;object-fit:cover;object-position:center}
+.contact__overlay{position:absolute;inset:0;z-index:1;background:linear-gradient(rgba(15,17,32,.5),rgba(15,17,32,.68))}
+.contact__inner{position:relative;z-index:2}
+.contact__panel{background:rgba(245,243,238,.97);border-radius:26px;padding:12px;box-shadow:0 40px 90px -40px rgba(0,0,0,.6);overflow:hidden}
+.contact__grid{display:grid;grid-template-columns:1fr 1.05fr;gap:0;align-items:stretch}
+.contact__left{padding:44px 44px 44px 40px}
+.contact__title{font-family:'Archivo',sans-serif;font-weight:700;font-size:clamp(1.9rem,3.6vw,2.6rem);line-height:1.1;color:var(--navy);letter-spacing:-.02em;margin-bottom:14px}
+.contact__lead{color:#5c5f72;font-size:1.02rem;line-height:1.5;margin-bottom:30px;max-width:42ch}
+.contact__cards{display:flex;flex-direction:column;gap:14px}
+.ccard{display:flex;gap:16px;align-items:flex-start;background:var(--paper);border:1px solid var(--line);border-radius:16px;padding:18px 20px;transition:box-shadow .2s,transform .15s}
+.ccard:hover{transform:translateY(-2px);box-shadow:0 14px 30px -16px rgba(35,39,70,.3)}
+.ccard__ic{flex:none;width:44px;height:44px;border-radius:50%;background:var(--cream);color:var(--navy);display:flex;align-items:center;justify-content:center}
+.ccard__ic svg{width:20px;height:20px}
+.ccard__label{font-size:.88rem;color:#5c5f72;margin-bottom:4px}
+.ccard__value{font-size:1.05rem;font-weight:700;color:var(--navy);line-height:1.35;display:block}
+a.ccard__value:hover{color:var(--orange)}
+.ccard__sub{font-size:.85rem;color:#8f93bd;margin-top:4px}
+.contact__map{position:relative;min-height:420px;background:#e9e6de}
+.contact__map iframe{position:absolute;inset:0;width:100%;height:100%;border:0;display:block}
+.bank--standalone{max-width:520px;margin:26px auto 0}
 
 .bank{background:linear-gradient(135deg,#2b2f52,#1b1e39);border:1px solid var(--navy-line);border-radius:18px;padding:30px;position:relative;overflow:hidden}
 .bank::after{content:"";position:absolute;right:-40px;top:-40px;width:160px;height:160px;border-radius:50%;background:rgba(232,134,43,.1)}
@@ -465,6 +475,9 @@ section{scroll-margin-top:84px}
   .bank__row{flex-wrap:wrap}
   .bank__v{text-align:left}
   .footer__bottom{flex-direction:column;align-items:flex-start}
+  .contact__grid{grid-template-columns:1fr}
+  .contact__left{padding:32px 24px}
+  .contact__map{min-height:300px;order:2}
 
   /* WhatsApp bar: shrink and center on mobile */
   .wa-bar{
