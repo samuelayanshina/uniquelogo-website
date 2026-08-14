@@ -208,7 +208,20 @@ section{scroll-margin-top:84px}
 /* =========================================================
    SERVICES — dark, tall image + card grid (wide middle card)
    ========================================================= */
-.services{background:var(--navy);color:#fff}
+.services{
+  position:relative;color:#fff;overflow:hidden;
+  background:#0f1120;
+}
+/* soft blurred glassy depth behind the whole section */
+.services::before{
+  content:"";position:absolute;inset:0;z-index:0;pointer-events:none;
+  background:
+    radial-gradient(60% 50% at 20% 15%, rgba(45,50,95,.55), transparent 70%),
+    radial-gradient(55% 45% at 85% 25%, rgba(35,39,70,.6), transparent 72%),
+    radial-gradient(70% 60% at 60% 100%, rgba(30,34,62,.5), transparent 70%);
+  filter:blur(60px);
+}
+.services > *{position:relative;z-index:1}
 .services__head{text-align:center;max-width:720px;margin:0 auto 52px}
 .services__title{
   font-family:'Archivo',sans-serif;font-weight:700;
@@ -228,10 +241,11 @@ section{scroll-margin-top:84px}
 
 .services__grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;align-content:start}
 .svc-card{
-  background:#2a2e52;border:1px solid var(--navy-line);border-radius:14px;
-  padding:28px 26px;transition:transform .15s,background .2s;
+  background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.06);border-radius:16px;
+  padding:32px 30px;transition:transform .15s,background .2s,border-color .2s;
+  backdrop-filter:blur(8px);
 }
-.svc-card:hover{transform:translateY(-3px);background:#30355e}
+.svc-card:hover{transform:translateY(-3px);background:rgba(255,255,255,.055);border-color:rgba(255,255,255,.12)}
 .svc-card--wide{grid-column:1 / -1}
 .svc-card__ic{width:44px;height:44px;border-radius:10px;background:rgba(232,134,43,.14);display:flex;align-items:center;justify-content:center;margin-bottom:18px}
 .svc-card__ic svg{width:22px;height:22px;stroke:var(--orange)}
