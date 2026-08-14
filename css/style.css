@@ -170,7 +170,7 @@ section{scroll-margin-top:84px}
   padding:12px 22px;border-radius:999px;transition:gap .2s,background .2s;
 }
 .wa-bar:hover .wa-bar__pill{gap:12px;background:#22c65e}
-
+.wa-bar__txt-short{display:none}
 /* =========================================================
    ABOUT ("Deep Roots") — two columns + photo collage
    ========================================================= */
@@ -383,10 +383,10 @@ section{scroll-margin-top:84px}
   .section{padding:64px 0}
   .nav__links{
     display:none;position:absolute;top:72px;left:0;right:0;flex-direction:column;gap:0;
-    background:linear-gradient(180deg,#232746 0%,#1b1e39 100%);
+    background:rgba(27,30,57,.82);backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);
     border-top:1px solid rgba(255,255,255,.08);
     box-shadow:0 24px 50px -12px rgba(0,0,0,.5);
-    padding:10px 0 18px;
+    padding:10px 0 22px;
   }
   .nav__links.show{display:flex}
   .nav__links a{
@@ -399,13 +399,15 @@ section{scroll-margin-top:84px}
   .nav__links a:hover,.nav__links a:active{background:rgba(255,255,255,.06);padding-left:32px;color:#fff !important}
   .nav__links a:hover::after,.nav__links a:active::after{opacity:1;transform:translateX(0)}
   .nav__cta{
-    margin:16px 24px 4px;text-align:center;justify-content:center;
-    color:#fff !important;border:none !important;
-    background:linear-gradient(135deg,#E8862B,#d9761c) !important;
-    padding:15px 24px;font-size:1.02rem;box-shadow:0 8px 20px -6px rgba(232,134,43,.6);
+    align-self:center !important;width:auto !important;max-width:max-content !important;
+    margin:20px auto 4px !important;
+    display:inline-flex !important;text-align:center;justify-content:center;align-items:center;
+    color:#fff !important;border:1.5px solid rgba(232,134,43,.9) !important;
+    background:rgba(232,134,43,.16) !important;backdrop-filter:blur(4px);
+    padding:13px 44px !important;font-size:1rem;box-shadow:none;border-radius:999px;
   }
   .nav__cta::after{content:none}
-  .nav__cta:hover,.nav__cta:active{background:linear-gradient(135deg,#f0912f,#E8862B) !important;padding-left:24px}
+  .nav__cta:hover,.nav__cta:active{background:rgba(232,134,43,.9) !important;border-color:var(--orange) !important;padding-left:44px !important}
   .nav__burger{display:flex}
   .hero{min-height:70vh}
   .hero__inner{padding-top:90px;padding-bottom:40px}
@@ -425,6 +427,18 @@ section{scroll-margin-top:84px}
   .bank__row{flex-wrap:wrap}
   .bank__v{text-align:left}
   .footer__bottom{flex-direction:column;align-items:flex-start}
+
+  /* WhatsApp bar: shrink and center on mobile */
+  .wa-bar{
+    max-width:100%;margin:28px auto 0;gap:10px;
+    padding:7px 7px 7px 16px;
+  }
+  .wa-bar__label{gap:9px;font-size:.95rem}
+  .wa-bar__txt-full{display:none}
+  .wa-bar__txt-short{display:inline}
+  .wa-bar__ic svg{width:18px;height:18px}
+  .wa-bar__pill{padding:11px 18px;font-size:.88rem;gap:6px}
+  .wa-bar__pill svg{width:15px;height:15px}
 }
 @media(prefers-reduced-motion:reduce){
   *{transition:none!important;animation:none!important;scroll-behavior:auto!important}
