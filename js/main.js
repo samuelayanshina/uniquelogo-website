@@ -95,3 +95,36 @@ if (copyBtn) {
     setTimeout(() => (copyBtn.textContent = original), 1200);
   });
 }
+
+// Testimonials: hover a card to feature it up top (smooth fade)
+(function () {
+  const feature = document.getElementById('testiFeature');
+  const featQuote = document.getElementById('featQuote');
+  const featName = document.getElementById('featName');
+  const featTitle = document.getElementById('featTitle');
+  const cards = document.querySelectorAll('#testiRow .testi__card');
+  if (!feature || !cards.length) return;
+
+  let current = null;
+
+  function setFeature(card) {
+    if (card === current) return;
+    current = card;
+    // highlight active card
+    cards.forEach((c) => c.classList.toggle('is-active', c === card));
+    // fade out, swap, fade in
+    feature.classList.add('is-swapping');
+    setTimeout(() => {
+      featQuote.innerHTML = '&ldquo;' + card.dataset.quote + '&rdquo;';
+      featName.textContent = card.dataset.name;
+      featTitle.textContent = card.dataset.title;
+      feature.classList.remove('is-swapping');
+    }, 180);
+  }
+
+  cards.forEach((card) => {
+    card.addEventListener('mouseenter', () => setFeature(card));
+    card.addEventListener('focus', () => setFeature(card));
+    card.addEventListener('click', () => setFeature(card));
+  });
+})();
