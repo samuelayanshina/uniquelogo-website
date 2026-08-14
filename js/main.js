@@ -18,6 +18,11 @@ window.addEventListener('scroll', onScroll, { passive: true });
 const wordmark = document.querySelector('.hero__wordmark');
 function fitWordmark() {
   if (!wordmark) return;
+  // on mobile, don't auto-fit — let the CSS font-size handle it (prevents overflow)
+  if (window.innerWidth <= 640) {
+    wordmark.style.fontSize = '';
+    return;
+  }
   const container = wordmark.parentElement;
   const cs = getComputedStyle(container);
   const available = container.clientWidth
