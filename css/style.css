@@ -397,16 +397,29 @@ a.ccard__value:hover{color:var(--orange)}
 .bank__copy:hover{background:var(--orange);color:#fff;border-color:var(--orange)}
 .bank__note{margin-top:16px;font-size:.78rem;color:#8f93bd;font-style:italic;position:relative;z-index:1}
 
+
+/* standalone Account Details section */
+.account{background:var(--cream)}
+.account .eyebrow{color:var(--navy);font-family:'Archivo',sans-serif;font-weight:600;letter-spacing:0;text-transform:none;font-size:1.05rem;padding-left:0}
+.account .eyebrow::before{display:none}
+.account .section__title-center{font-family:'Archivo',sans-serif;font-weight:700;letter-spacing:-.02em;line-height:1.14}
+.account__card{max-width:540px;margin:0 auto}
+
 /* =========================================================
    FAQ (single white card + accordion)
    ========================================================= */
 .faq{background:var(--cream)}
+/* FAQ heading: clean neutral style like the other sections */
+.faq .section__title-center{font-family:'Archivo',sans-serif;font-weight:700;letter-spacing:-.02em;line-height:1.14}
+/* FAQ heading: clean neutral style like the other sections */
+.faq .section__title-center{font-family:'Archivo',sans-serif;font-weight:700;letter-spacing:-.02em;line-height:1.14}
 .faq__card{background:var(--paper);border:1px solid var(--line);border-radius:22px;max-width:820px;margin:0 auto;padding:20px 40px;box-shadow:0 24px 60px -34px rgba(35,39,70,.22)}
 .acc__item{border-bottom:1px solid var(--line)}
 .acc__item:last-child{border-bottom:none}
-.acc__q{width:100%;background:none;border:0;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:20px;padding:26px 4px;text-align:left;font-family:'Archivo',sans-serif;font-size:1.08rem;font-weight:700;color:var(--navy)}
-.acc__plus{flex:none;width:26px;height:26px;border-radius:50%;background:var(--navy);color:#fff;display:flex;align-items:center;justify-content:center;font-size:1.1rem;line-height:1;transition:transform .25s,background .2s}
-.acc__item--open .acc__plus{transform:rotate(45deg);background:var(--orange)}
+.acc__q{width:100%;background:none;border:0;cursor:pointer;display:flex;flex-direction:row-reverse;justify-content:flex-end;align-items:flex-start;gap:16px;padding:24px 4px;text-align:left;font-family:'Archivo',sans-serif;font-size:1.08rem;font-weight:700;color:var(--navy)}
+.acc__plus{flex:none;width:22px;height:22px;border-radius:0;background:none;color:var(--navy);display:flex;align-items:center;justify-content:center;font-size:1.5rem;font-weight:400;line-height:1;transition:transform .25s,color .2s;margin-top:1px}
+.acc__item--open .acc__plus{transform:rotate(45deg);color:var(--orange)}
+.acc__a p{padding-left:42px}
 .acc__a{max-height:0;overflow:hidden;transition:max-height .3s ease}
 .acc__a p{padding:0 4px 26px;color:#3f4257;font-size:.98rem;max-width:64ch}
 
