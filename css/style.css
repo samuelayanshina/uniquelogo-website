@@ -332,12 +332,16 @@ section{scroll-margin-top:84px}
    CREDENTIALS (certificates)
    ========================================================= */
 .creds{background:var(--paper)}
+/* Credentials heading: clean neutral style like the other sections */
+.creds .eyebrow{color:var(--navy);font-family:'Archivo',sans-serif;font-weight:600;letter-spacing:0;text-transform:none;font-size:1.05rem;padding-left:0}
+.creds .eyebrow::before{display:none}
+.creds .section__title-center{font-family:'Archivo',sans-serif;font-weight:700;letter-spacing:-.02em;line-height:1.14}
 .creds__grid{display:grid;grid-template-columns:1fr 1fr;gap:32px;max-width:820px;margin:0 auto}
 .cert{background:var(--cream);border:1px solid var(--line);border-radius:var(--radius);padding:20px;text-align:center;transition:transform .15s,box-shadow .2s}
 .cert:hover{transform:translateY(-4px);box-shadow:0 18px 44px -20px rgba(35,39,70,.35)}
 .cert img{width:100%;border-radius:8px;border:1px solid var(--line)}
 .cert figcaption{margin-top:16px}
-.cert h3{font-family:'Barlow Semi Condensed',sans-serif;font-weight:800;text-transform:uppercase;letter-spacing:.06em;color:var(--navy);font-size:1.05rem}
+.cert h3{font-family:'Archivo',sans-serif;font-weight:700;text-transform:none;letter-spacing:-.01em;color:var(--navy);font-size:1.1rem}
 .cert figcaption p{font-size:.86rem;color:var(--muted);margin-top:4px}
 .cert__view{display:inline-block;margin-top:10px;font-size:.78rem;font-weight:700;color:var(--orange);text-transform:uppercase;letter-spacing:.06em}
 
