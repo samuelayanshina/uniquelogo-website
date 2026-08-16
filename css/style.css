@@ -353,7 +353,7 @@ section{scroll-margin-top:84px}
 .cta__bg img{width:100%;height:100%;object-fit:cover}
 .cta__overlay{position:absolute;inset:0;z-index:1;background:linear-gradient(rgba(20,22,40,.72),rgba(20,22,40,.82))}
 .cta__content{position:relative;z-index:2;max-width:680px}
-.cta h2{font-family:'Barlow Semi Condensed',sans-serif;font-weight:800;font-size:clamp(2rem,4.4vw,3.1rem);line-height:1.06;letter-spacing:-.01em}
+.cta h2{font-family:'Archivo',sans-serif;font-weight:700;font-size:clamp(2rem,4.2vw,2.9rem);line-height:1.12;letter-spacing:-.02em}
 .cta p{color:#e4e5f0;font-size:1.05rem;margin:16px auto 28px;max-width:44ch}
 .cta__btn{background:#fff;color:var(--ink)}
 .cta__btn:hover{background:#f0f0f0}
